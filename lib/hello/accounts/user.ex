@@ -5,7 +5,7 @@ defmodule Hello.Accounts.User do
   schema "users" do
     field :email, :string
     field :password, :string, virtual: true, redact: true
-    field :password_confirm, :string, virtual: true, redact: true
+    # field :password_confirm, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
 
@@ -31,7 +31,7 @@ defmodule Hello.Accounts.User do
   """
   def registration_changeset(user, attrs, opts \\ []) do
     user
-    |> cast(attrs, [:email, :password, :password_confirm])
+    |> cast(attrs, [:email, :password])
     |> validate_email()
     |> validate_password(opts)
   end
@@ -104,13 +104,13 @@ defmodule Hello.Accounts.User do
     |> validate_password(opts)
   end
 
-  def password_confirm_changeset(user, attrs, opts \\ []) do
-    user
-    |> cast(attrs, [:password_confirm])
-    |> validate_confirmation(:password_confirm, message: "does not match password")
+  # def password_confirm_changeset(user, attrs, opts \\ []) do
+  #   user
+  #   |> cast(attrs, [:password_confirm])
+  #   |> validate_confirmation(:password_confirm, message: "does not match password")
 
-    # |> validate_password(opts)
-  end
+  #   # |> validate_password(opts)
+  # end
 
   @doc """
   Confirms the account by setting `confirmed_at`.
