@@ -304,6 +304,14 @@ img, video {
   z-index: 10;
 }
 
+.z-0 {
+  z-index: 0;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -331,6 +339,18 @@ img, video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.ml-2 {
+  margin-left: .5rem;
 }
 
 .block {
@@ -373,6 +393,14 @@ img, video {
   height: 14rem;
 }
 
+.h-4 {
+  height: 1rem;
+}
+
+.min-h-full {
+  min-height: 100%;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -393,8 +421,16 @@ img, video {
   width: 100%;
 }
 
+.w-4 {
+  width: 1rem;
+}
+
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
 }
 
 .flex-1 {
@@ -434,6 +470,10 @@ img, video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y) ) rotate(var(--tw-rotate) ) skewX(var(--tw-skew-x) ) skewY(var(--tw-skew-y) ) scaleX(var(--tw-scale-x) ) scaleY(var(--tw-scale-y) );
 }
 
+.appearance-none {
+  appearance: none;
+}
+
 .items-center {
   align-items: center;
 }
@@ -458,6 +498,24 @@ img, video {
   margin-bottom: calc(.25rem * var(--tw-space-y-reverse) );
 }
 
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse) ) );
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse) );
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse) ) );
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse) );
+}
+
+.-space-y-px > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-1px * calc(1 - var(--tw-space-y-reverse) ) );
+  margin-bottom: calc(-1px * var(--tw-space-y-reverse) );
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -474,12 +532,35 @@ img, video {
   border-radius: .5rem;
 }
 
+.rounded-none {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: .25rem;
+}
+
+.rounded-t-md {
+  border-top-left-radius: .375rem;
+  border-top-right-radius: .375rem;
+}
+
+.rounded-b-md {
+  border-bottom-left-radius: .375rem;
+  border-bottom-right-radius: .375rem;
+}
+
 .border {
   border-width: 1px;
 }
 
 .border-transparent {
   border-color: #0000;
+}
+
+.border-gray-300 {
+  --tw-border-opacity: 1;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity) );
 }
 
 .bg-gray-800 {
@@ -569,6 +650,11 @@ img, video {
   padding-right: 2rem;
 }
 
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .pr-2 {
   padding-right: .5rem;
 }
@@ -610,6 +696,11 @@ img, video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-medium {
@@ -664,6 +755,11 @@ img, video {
   color: rgb(67 56 202 / var(--tw-text-opacity) );
 }
 
+.placeholder-gray-500::placeholder {
+  --tw-placeholder-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-placeholder-opacity) );
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -687,6 +783,12 @@ img, video {
 .shadow {
   --tw-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 #0000000d;
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -876,6 +978,10 @@ img, video {
   }
 }
 
+.hover\:z-50:hover {
+  z-index: 50;
+}
+
 .hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity) );
@@ -919,6 +1025,15 @@ img, video {
 .hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity) );
+}
+
+.focus\:z-10:focus {
+  z-index: 10;
+}
+
+.focus\:border-indigo-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(99 102 241 / var(--tw-border-opacity) );
 }
 
 .focus\:outline-none:focus {
@@ -1053,6 +1168,11 @@ img, video {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-sm {
+    font-size: .875rem;
+    line-height: 1.25rem;
   }
 }
 
